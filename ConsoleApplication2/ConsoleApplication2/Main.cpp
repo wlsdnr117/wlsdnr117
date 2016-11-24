@@ -1,9 +1,26 @@
 #include <process.h>
 #include <iostream>
 #include "KeyEvent.h"
+#include "Frame.h"
 using namespace std;
 
-class Game {
+void main()
+{
+	try
+	{
+		Frame *f1 = new Frame;
+		Frame *f2 = new Frame[10];
+
+		delete f1;
+		delete[] f2;
+	}
+
+	catch (string msg)
+	{
+		cout << "Error msg : " << msg << endl;
+	}
+}
+/*class Game {
 private:
 	int x;
 	int y;
@@ -108,4 +125,4 @@ int main()
 	CloseHandle(handleB);
 
 	return 0;
-}
+}*/
